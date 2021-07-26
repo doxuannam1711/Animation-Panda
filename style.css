@@ -1,0 +1,132 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #0d70ff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panda{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(black 40%,#e0dfda 30%);
+    border-radius: 200px 200px 150px 150px ;
+    border: 0.5px solid white;
+}
+.face{
+    width: 200px;
+    height: 170px;
+    background: #FCF2D0;
+    border-radius: 50%;
+    position:relative;
+    top: -120px;
+    box-shadow: 50px 0px 0px #FAE0BD inset;
+}
+.l-hand{
+    width: 55px;
+    height: 100px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    top: -200px;
+    left:-10px;
+    z-index: -1; /*z-index số nhỏ hơn nằm ở dưới */
+    transform: rotate(-30deg);
+    transform-origin: bottom;
+}
+.r-hand{
+    width: 55px;
+    height: 100px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    top: -297px;
+    left:160px;
+    z-index: -1;
+    transform: rotate(27deg);
+    transform-origin: bottom;
+}
+.l-foot{
+    width: 55px;
+    height: 100px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    bottom: 200px;
+    left:30px;
+    z-index: -1;
+    transform-origin:bottom ;
+}
+.r-foot{
+    width: 55px;
+    height: 100px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    bottom: 300px;
+    left:110px;
+    z-index: -1;
+    transform-origin:bottom ;
+}
+.ear-l{
+    width: 70px;
+    height: 70px;
+    background: black;
+    position: relative;
+    border-radius: 50px;
+    bottom: 30px;
+    z-index: -1;
+    transform-origin:bottom ;
+}
+.ear-r{
+    width: 70px;
+    height: 70px;
+    background: black;
+    position: relative;
+    border-radius: 50%;
+    bottom: 100px;
+    left:130px;
+    z-index: -1;
+    transform-origin:bottom ;
+}
+.eye-1{
+    width: 50px;
+    height: 60px;
+    background: rgb(0, 0, 0);
+    position: relative;
+    border-radius: 50%;
+    bottom: 100px;
+    left:20px;
+    z-index: 0;
+    transform-origin:bottom ;
+}
+.eye-2{
+    width: 50px;
+    height: 60px;
+    background: rgb(8, 8, 8);
+    position: relative;
+    border-radius: 50%;
+    bottom: 160px;
+    left:130px;
+    z-index: 0;
+    transform-origin:bottom ;
+}
+/*Nếu position là relative thì nó 
+sẽ thay đổi theo cái vị trí ban đầu 
+của nó và relative không làm 
+thay đổi các đối tượng khác*/
+
+/*Nếu position là absolute nó sẽ thay đổi theo đối tượng cha 
+gần nhất chứa nó có positon là ralative còn nếu không có position
+là relative thì nó sẽ thay đổi vị trí theo root element(chính là thẻ HTML)*/
+
+/*Nếu position là fixed thì đối tượng sẽ thay đổi cùng với root element(thẻ HTML)
+tức là khi cuộn trang thì đối tượng có position là fixed sẽ chạy theo trang HTML*/
+
+/*Nếu position là sticky tương tự như fixed nhưng nó thay đổi theo lớp cha chứa nó thôi*/
