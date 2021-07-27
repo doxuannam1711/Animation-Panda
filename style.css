@@ -11,6 +11,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: change-color 4s infinite linear;
+}
+@keyframes change-color{
+    0% {background-color: crimson;}
+    25% {background-color: lightsalmon;}
+    50% {background-color: pink;}
+    100% {background-color: indigo;}
 }
 .panda{
     width: 200px;
@@ -39,6 +46,12 @@ body{
     z-index: -1; /*z-index số nhỏ hơn nằm ở dưới */
     transform: rotate(-30deg);
     transform-origin: bottom;
+    animation: l-hand-waving 2s infinite linear;
+}
+@keyframes l-hand-waving {
+    50%{
+        transform: rotate(-50deg);
+    }
 }
 .r-hand{
     width: 55px;
@@ -116,6 +129,40 @@ body{
     left:130px;
     z-index: 0;
     transform-origin:bottom ;
+}
+.iris{
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 254, 254);
+    position: absolute;
+    border-radius: 50%;
+    top: 20px;
+    left:15px;
+    z-index: 0;
+    transform-origin:bottom ;
+}
+.nose{
+    width: 40px;
+    height: 30px;
+    background: rgb(7, 7, 7);
+    position: absolute;
+    border-radius: 50%;
+    top: 80px;
+    left:80px;
+    z-index: 0;
+    transform-origin:bottom ;
+}
+.mouth{
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border:10px solid transparent;
+    border-bottom-color:black;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left:45px;
+    transform: rotate(0deg);
 }
 /*Nếu position là relative thì nó 
 sẽ thay đổi theo cái vị trí ban đầu 
